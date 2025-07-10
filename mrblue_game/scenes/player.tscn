@@ -1,26 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://8dnkh0s20yex"]
+[gd_scene load_steps=7 format=3 uid="uid://cyxwe1ut1tq33"]
 
 [ext_resource type="Texture2D" uid="uid://v8rw1apbgxwg" path="res://assets/sprites/3 Dude_Monster/Dude_Monster_Idle_4.png" id="1_3vyb7"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vyb7"]
 atlas = ExtResource("1_3vyb7")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("1_3vyb7")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("1_3vyb7")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_tuyoq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qlg0r"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vyb7")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g2els")
 }, {
@@ -29,26 +32,17 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dqkch")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qlg0r")
 }],
 "loop": true,
-"name": &"default",
+"name": &"idle",
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fjrip"]
-radius = 7.0
-
-[node name="player" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -16)
-sprite_frames = SubResource("SpriteFrames_tuyoq")
-autoplay = "default"
-frame_progress = 0.650314
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -7)
-shape = SubResource("CircleShape2D_fjrip")
+position = Vector2(1, -16)
+sprite_frames = SubResource("SpriteFrames_qlg0r")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.258564
