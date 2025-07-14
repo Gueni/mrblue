@@ -229,6 +229,7 @@ position = Vector2(407, -43)
 libraries = {
 &"": SubResource("AnimationLibrary_ni05p")
 }
+autoplay = "move_platform"
 
 [node name="Coin" parent="." instance=ExtResource("4_76b3h")]
 position = Vector2(56, 55)
