@@ -220,6 +220,8 @@ tile_set = SubResource("TileSet_76b3h")
 rotation = -3.14159
 scale = Vector2(15.8094, 1.44355)
 zoom = Vector2(4, 4)
+limit_bottom = 100
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="platform_green" parent="." instance=ExtResource("3_7wsnb")]
