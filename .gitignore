@@ -14,3 +14,5 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+/d:/WORKSPACE/mrblue/mrblue_game/mrblue_game.exe
+mrblue_game/mrblue_game.exe
